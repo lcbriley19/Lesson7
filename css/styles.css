@@ -1,0 +1,149 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* -----Header Styling----- */
+header {
+  grid-area: header;
+  text-align: right;
+  padding-right: 5%;
+}
+.name-header {
+  margin-bottom: 0;
+}
+.page-name {
+  margin: 0;
+  font-size: 12pt;
+}
+
+/* ------Nav Styling------- */
+.nav-menu {
+  grid-area: nav;
+  list-style-type: none;
+  font-size: 14pt;
+}
+ul.nav-menu li {
+  display: inline-block;
+}
+ul.nav-menu li a {
+  text-decoration: none;
+  color: black;
+  line-height: 1.5;
+  padding: 75%;
+}
+
+ul.nav-menu li a:hover {
+  padding-bottom: 2%;
+  text-decoration: underline;
+}
+
+/* -----Web-Cards Styling----- */
+
+.web-header {
+  grid-area: web-head;
+  text-align: center;
+}
+.web-cards {
+  grid-area: web-cards;
+}
+/* -----Graphic-Cards Styling----- */
+.graphic-header {
+  grid-area: graphic-head;
+  text-align: center;
+}
+
+.graphic-cards {
+  grid-area: graphic-cards;
+}
+
+/* ------Cards styling------ */
+
+li.card {
+  list-style-type: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 1%;
+  display: grid;
+}
+li.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+p.caption {
+  padding: 1% 4%;
+}
+
+/* .web-cards,
+.graphic-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+} */
+img {
+  width: 95%;
+  margin: 2% auto;
+}
+
+/* -----Footer Styling----- */
+footer {
+  grid-area: footer;
+  background-color: #284482;
+  color: #c2ace2;
+}
+.footer-nav {
+  list-style-type: none;
+  display: inline-block;
+  padding-top: 1%;
+  padding-left: 8%;
+  width: 30%;
+}
+
+.footer-copy {
+  float: right;
+  padding-right: 8%;
+
+  padding-top: 3.7%;
+}
+ul.footer-nav li a {
+  text-decoration: none;
+  color: #c2ace2;
+  line-height: 2;
+}
+
+ul.footer-nav li a:hover {
+  padding-bottom: 2%;
+  text-decoration: underline;
+}
+
+/* -----Media Query----- */
+@media screen and (min-width: 750px) {
+  body {
+    display: grid;
+    grid-template-columns: 10em auto;
+    grid-template-rows: 8em 5em auto 5em auto 10em;
+    grid-template-areas:
+      "nav header"
+      "nav web-head"
+      "nav web-cards"
+      "nav graphic-head"
+      "nav graphic-cards"
+      "footer footer";
+  }
+  .web-cards,
+  .graphic-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-menu {
+    padding-top: 40%;
+    display: grid;
+  }
+
+  ul.nav-menu li {
+    display: block;
+  }
+  ul.nav-menu li a {
+    padding: 0;
+  }
+}
